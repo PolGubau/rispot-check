@@ -1,6 +1,6 @@
 import Head from "next/head";
-import Image from "next/image";
 import Carrousel from "../components/Carrousel/Carrousel";
+import Grid from "src/components/Grid/Grid";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -16,6 +16,7 @@ export default function Home() {
         <h1 className={styles.title}>Rispot Check</h1>
         <h3>Una web de análisis</h3>
         <Carrousel />
+        <Grid />
       </main>
     </div>
   );
