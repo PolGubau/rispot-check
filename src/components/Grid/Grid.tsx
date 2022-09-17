@@ -1,10 +1,14 @@
-import React from "react";
-import styles from "./Carrousel.module.css";
-export default function Carrousel() {
+import Link from "next/link";
+import styles from "./Grid.module.css";
+export default function Grid() {
   return (
     <>
-      <p>Productos en oferta 🔥</p>
-      <div className={styles.carrousel}>carrousel</div>
+      <p>CATEGORIAS</p>
+      <div className={styles.grid}>
+        <Link href={`/categorias/${"Ropa"}`} className={styles.element}>
+          Ropa
+        </Link>
+      </div>
     </>
   );
 }
