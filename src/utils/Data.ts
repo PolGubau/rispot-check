@@ -3,7 +3,7 @@ import { Category, Sale } from "src/interfaces/tableInterfaces";
 export const Sales: Sale[] = [
   {
     id: 1,
-    name: "Mejor manzanas del mercado",
+    name: "Mejores manzanas del mercado",
     description: "Fruits Desripcion",
     oldPrice: 100,
     newPrice: 50,
@@ -11,18 +11,18 @@ export const Sales: Sale[] = [
     since: "2022-09-18T16:28:13.698Z",
     category: "Frutas",
     stars: 48,
-    valorations: 10,
+    valorations: 18,
   },
   {
     id: 2,
-    name: "Nuevas frutas para ver",
+    name: "Nuevas frutas asdasdasddaasdasdasddasdasdaasdasdasddasdasdasdasda para ver",
     description: "Fruits Desripcion",
     oldPrice: 75,
     newPrice: 80,
     image: "https://picsum.photos/200/300",
     since: "2022-09-18T16:28:13.698Z",
     category: "Frutas",
-    stars: 48,
+    stars: 25,
     valorations: 10,
   },
   {
