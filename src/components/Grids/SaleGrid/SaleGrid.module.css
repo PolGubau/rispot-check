@@ -3,6 +3,11 @@
     width: 100%;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     grid-gap: 20px;
+    justify-items: start;
+    align-items: stretch;
+    justify-content: center;
+    align-content: center;
+
 }
 
 .card {
@@ -30,6 +35,28 @@
     object-fit: cover;
     border-radius: 20px;
 
+}
+
+.nameProduct {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1rem;
+    color: black;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+
+.newPrice {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1.7rem;
+    color: black;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
 }
 
 .oldPrice {
