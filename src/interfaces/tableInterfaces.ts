@@ -6,7 +6,8 @@ export interface Sale {
   newPrice: number;
   image: string;
   since: string;
-  category: number;
+  stars: number;
+  category: string;
   valorations: number;
 }
 
