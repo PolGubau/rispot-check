@@ -28,12 +28,12 @@ export default function SaleGrid({ array }: any) {
                     />
                   </div>
                   <div>
-                    <h3>{element.name}</h3>
-                    <p>{element.newPrice / 100}</p>
+                    <h3 className={styles.nameProduct}>{element.name}</h3>
+                    <div className={styles.price}></div>
+                    <p className={styles.newPrice}>{element.newPrice / 100}€</p>
                     <p className={styles.oldPrice}>
                       PVPR:
                       <span className={styles.oldPriceNumbers}>
-                        {` `}
                         {element.oldPrice / 100}€
                       </span>
                     </p>
