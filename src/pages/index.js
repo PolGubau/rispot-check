@@ -3,7 +3,7 @@ import Carrousel from "../components/Carrousel/Carrousel";
 import CategoryGrid from "src/components/Grids/CategoryGrid/CategoryGrid";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
-import { Category } from "src/utils/Data";
+import { Categories } from "src/utils/Data";
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -21,7 +21,7 @@ export default function Home() {
             <Carrousel />
           </a>
         </Link>
-        <CategoryGrid array={Category} />
+        <CategoryGrid array={Categories} />
       </main>
     </div>
   );
