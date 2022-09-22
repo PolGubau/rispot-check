@@ -12,16 +12,27 @@ export default function SaleElement({ product }: { product: SaleInterface }) {
       <div className={styles.card}>
         <div className={styles.cardContent}>
           <div className={styles.cardHeader}>
+            {/* IMAGE */}
             <div className={styles.cardImage}>
-              <Image src={image} alt={name} width={150} height={150} />
+              <div className={styles.cardImageOverlay}>
+                <Image
+                  src={image}
+                  alt={name}
+                  width={150}
+                  height={150}
+                  //   layout="fill"
+                  loading="lazy"
+                />
+              </div>
             </div>
           </div>
+
           <div className={styles.cardFooter}>
             {/* NAME */}
             <h3 className={styles.nameProduct}>
               {
                 // showing prod.name with a max of 30 characters:
-                name.length > 30 ? name.substring(0, 30) + "..." : name
+                name.length > 30 ? name.substring(0, 50) + "..." : name
               }
             </h3>
             {/* STARS */}
@@ -44,19 +55,25 @@ export default function SaleElement({ product }: { product: SaleInterface }) {
                 {valorations} valoraciones globales.
               </p>
             </div>
-            <div className={styles.price}>
-              <p className={styles.newPrice}>{newPrice / 100}€</p>
-            </div>
 
-            {/* Absolute */}
-            <div className={styles.percents}>
-              <p className={styles.oldPrice}>
-                PVPR:
-                <span className={styles.oldPriceNumbers}>
-                  {oldPrice / 100}€
-                </span>
-              </p>
-              <p>Ahorra {savingPercentage}%</p>
+            <div className={styles.bottom}>
+              {/* PRICE */}
+              <div className={styles.price}>
+                <p className={styles.newPrice}>{newPrice / 100}€</p>
+              </div>
+
+              {/* PERCENT */}
+              <div className={styles.percentsContainer}>
+                <div className={styles.percents}>
+                  <p className={styles.oldPrice}>
+                    PVPR:
+                    <span className={styles.oldPriceNumbers}>
+                      {oldPrice / 100}€
+                    </span>
+                  </p>
+                  <p>Ahorra {savingPercentage}%</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
