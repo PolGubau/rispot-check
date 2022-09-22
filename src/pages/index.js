@@ -4,7 +4,8 @@ import CategoryGrid from "src/components/Grids/CategoryGrid/CategoryGrid";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
 import { Categories } from "src/utils/Data";
-export default function Home() {
+import SaleGrid from "src/components/Grids/SaleGrid/SaleGrid";
+export default function Home({ data }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -21,8 +22,20 @@ export default function Home() {
             <Carrousel />
           </a>
         </Link>
-        <CategoryGrid array={Categories} />
+        <SaleGrid array={data} />
+        {/* <CategoryGrid array={Categories} /> */}
       </main>
     </div>
   );
+}
+
+export async function getStaticProps() {
+  const res = await fetch("http://localhost:3000/api/sales");
+  const data = await res.json();
+  console.log(data);
+  return {
+    props: {
+      data,
+    },
+  };
 }
