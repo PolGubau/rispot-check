@@ -25,14 +25,14 @@
 
 .cardContent {
     height: 100%;
-        width: 100%;
-        position: relative;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        flex-wrap: nowrap;
-        align-content: center;
-        flex-direction: column;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    align-content: center;
+    flex-direction: column;
 }
 
 .cardImage {
