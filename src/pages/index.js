@@ -17,11 +17,11 @@ export default function Home({ data }) {
       <main className={styles.main}>
         <h1 className={styles.title}>Rispot Check</h1>
         <h3>Una web de análisis</h3>
-        <Link href="/ofertas">
+        {/* <Link href="/ofertas">
           <a className={styles.mainLink}>
             <Carrousel />
           </a>
-        </Link>
+        </Link> */}
         <SaleGrid array={data} />
         {/* <CategoryGrid array={Categories} /> */}
       </main>
