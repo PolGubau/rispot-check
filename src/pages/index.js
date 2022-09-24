@@ -3,7 +3,7 @@ import Carrousel from "../components/Carrousel/Carrousel";
 import CategoryGrid from "src/components/Grids/CategoryGrid/CategoryGrid";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
-import { Categories } from "src/utils/Data";
+import { dominio } from "src/utils/consts";
 import SaleGrid from "src/components/Grids/SaleGrid/SaleGrid";
 export default function Home({ data }) {
   return (
@@ -17,11 +17,7 @@ export default function Home({ data }) {
       <main className={styles.main}>
         <h1 className={styles.title}>Rispot Check</h1>
         <h3>Una web de análisis</h3>
-        {/* <Link href="/ofertas">
-          <a className={styles.mainLink}>
-            <Carrousel />
-          </a>
-        </Link> */}
+
         <SaleGrid array={data} />
         {/* <CategoryGrid array={Categories} /> */}
       </main>
@@ -30,7 +26,7 @@ export default function Home({ data }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch("http://localhost:3000/api/sales");
+  const res = await fetch(`http://${dominio}/api/sales`);
   const data = await res.json();
   console.log(data);
   return {
