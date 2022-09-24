@@ -1,6 +1,9 @@
-import { Category, Sale } from "src/interfaces/tableInterfaces";
+import {
+  CategoryInterface,
+  SaleInterface,
+} from "src/interfaces/tableInterfaces";
 
-export const Sales: Sale[] = [
+export const Sales: SaleInterface[] = [
   {
     id: 1,
     name: "Mejores manzanas del mercado",
@@ -51,7 +54,7 @@ export const Sales: Sale[] = [
   },
 ];
 
-export const Categories: Category[] = [
+export const Categories: CategoryInterface[] = [
   {
     id: 1,
     name: "Frutas",
